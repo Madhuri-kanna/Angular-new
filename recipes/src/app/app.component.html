@@ -1,0 +1,13 @@
+<h1>Food</h1>
+<div class="receipes">
+  <div *ngFor="let r of recipes" class="recipe">
+    <img src={{r.image}} alt={{r.title}}>
+      <h2>{{r.name}}</h2>
+      <p><strong>ingredients:</strong></p>
+      <span *ngFor="let i of r.ingredients">
+        <span>{{i}} ,</span>
+      </span><br>
+      <br>
+      <button>Add to Cart</button>
+  </div>
+</div>
