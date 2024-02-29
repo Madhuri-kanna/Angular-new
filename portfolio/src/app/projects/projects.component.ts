@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from '../data.service';
+
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
@@ -7,7 +8,7 @@ import { DataService } from '../data.service';
 })
 export class ProjectsComponent {
   projects:any[]=[]
-  constructor(private ds:DataService){
-    this.ds.getData().subscribe((data:any)=>this.projects=data)
-  }
+  constructor(private ds: DataService) {
+   this.ds.getData().subscribe((data:any)=>this.projects=data)
+}
 }

@@ -8,16 +8,20 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { ProjectComponent } from './project/project.component';
 
 const rts: Routes = [
-  { path: 'home',component:HomeComponent, children:[
-    { path: 'about',component:AboutComponent},
-    { path:'contact',component:ContactComponent}
-  ],
-},
-  { path: 'about',component:AboutComponent},
-  { path: 'projects',component:ProjectsComponent},
-  { path: 'contact',component:ContactComponent},
+  { path: '', component: HomeComponent },
+  {
+    path: 'home',
+    component: HomeComponent,
+    children: [
+      { path: 'about', component: AboutComponent },
+      { path: 'contact', component: ContactComponent },
+    ],
+  },
+  { path: 'about', component: AboutComponent },
+  { path: 'projects', component: ProjectsComponent },
+  { path: 'contact', component: ContactComponent },
   { path:'project/:id',component:ProjectComponent},
-  { path:'**',component:NotfoundComponent},
+  { path: '**', component: NotfoundComponent },
 ];
 
 @NgModule({

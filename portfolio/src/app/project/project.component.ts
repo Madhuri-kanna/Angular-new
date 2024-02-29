@@ -8,13 +8,14 @@ import { DataService } from '../data.service';
   styleUrl: './project.component.css'
 })
 export class ProjectComponent {
-    id: any;
-    product: any;
-    constructor(private route:ActivatedRoute,private ds:DataService)
-    {
-       this.route.params.subscribe((data)=>{
-        this.id = data['id'];
-        this.ds.get(this.id).subscribe((data:any)=> this.product=data)
-      })
-    }
-}
+  id: any;
+  product: any;
+  constructor(private route:ActivatedRoute,private ds:DataService)
+  {
+    this.route.params.subscribe((data) => {
+      this.id = data[ 'id' ];
+      this.ds.get(this.id).subscribe((data:any)=>this.product=data)
+    })
+  }
+  }
+

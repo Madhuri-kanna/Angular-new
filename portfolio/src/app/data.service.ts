@@ -4,14 +4,14 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class DataService {
-
-  constructor(private hc:HttpClient) { }
+  constructor(private hc: HttpClient) { }
   getData()
   {
-    return this.hc.get('http://fakestoreapi.com/products')
+    return this.hc.get('https://fakestoreapi.com/products')
   }
   get(id:any)
   {
-    return this.hc.get('http://fakestoreapi.com/products/${id}');
+    return this.hc.get(`https://fakestoreapi.com/products/${id}`);
   }
 }
+
